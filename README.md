@@ -97,13 +97,20 @@ As described in the paper, four subsets WLASL100, WLASL300, WLASL1000 and WLASL2
 Training and Testing
 
 **Pose-TGCN**
+```
+cd WLASL
+mkdir data
+```
+put all the videos under ```data/```.
+
+Download [splits file](https://drive.google.com/file/d/16CWkbMLyEbdBkrxAPaxSXFP_aSxKzNN4/view?usp=sharing) and [body keypoints](https://drive.google.com/file/d/1k5mfrc2g4ZEzzNjW6CEVjLvNTZcmPanB/view?usp=sharing). Unzip them into ```SilentTalk/data```. You should see ```SilentTalk/data/splits``` and ```SilentTalk/data/pose_per_individual_videos``` folders.
 
 To train the model, modify paths in ```train_tgcn.py main()``` to point to SilentTalk root.
 ```
 python train_tgcn.py
 ```
 
-To test the model, Then run
+To test the model, first download [pre-trained models](https://drive.google.com/file/d/1dzvocsaylRsjqaY4r_lyRihPZn0I6AA_/view?usp=sharing) and unzip to ```code/TGCN/archived```. Then run
 ```
 python test_tgcn.py
 ```
